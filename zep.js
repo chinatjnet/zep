@@ -342,7 +342,7 @@ Zepto = function() {
             }
         }
         var touchName = "touchstart touchmove touchend touchcancel", d = $(document);
-        d.unbind("touchstart touchmove touchend");
+        d.unbind(touchName);
         touchName.split(/\s/).forEach(function(event) {
             $.fun.on.call(d, event, touchEvent[event]);
         });
